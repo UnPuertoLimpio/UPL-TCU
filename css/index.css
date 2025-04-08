@@ -1,5 +1,9 @@
 .redes svg {
-    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.redes a{
+   text-decoration: none;
 }
 
 .navbar {
@@ -17,6 +21,10 @@
 .bg-claro {
     background-color: #f3f3f3;
 }
+
+.scroll-target {
+    scroll-margin-top: 70px; /* o la altura de tu navbar */
+  }
 
 .inicio {
     height: 100lvh;
@@ -115,7 +123,6 @@
         margin-right: 0px;
         margin-bottom: 50px;
     }
-
 
   }
 
