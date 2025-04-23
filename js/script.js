@@ -36,7 +36,7 @@ createApp({
             }
         },
         agregarEvento() {
-            this.eventos.push({ ...this.nuevoUsuario });
+            this.eventos.push({ ...this.nuevoEvento });
             this.nuevoEvento = { nombre: '', hora: '', fecha: '' , lugar: '' };
             this.guardarEventos();
         },
