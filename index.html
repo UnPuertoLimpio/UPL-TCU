@@ -6,10 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Un Puero Limpio</title>
 
+   <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+   <!--CSS-->
   <link rel="stylesheet" href="css/index.css">
 
+  <!--JQUERY-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -294,17 +298,27 @@
       <div class="col-md-6 d-flex align-items-center">
         <div class="formulario-contacto w-100 mt-3 mb-2">
           <strong>FORMULARIO DE CONTACTO</strong>
+          <form id="contactForm">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Juan Perez">
+            <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Juan Perez"
+              required>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput2" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+            <input type="email" name="email" class="form-control" id="exampleFormControlInput2"
+              placeholder="name@example.com" required>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+          </div>
+          <div class="d-grid gap-3">
+            <button type="submit" class="btn btn-orange btn-block">Enviar</button>
+          </div>
+          </form>
+          <div class="mb-3">
+            <div class="text-secondary" id="respuesta"></div>
           </div>
         </div>
       </div>
@@ -361,6 +375,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="js/index.js"></script>
+
 
 </body>
 
