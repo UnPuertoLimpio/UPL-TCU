@@ -4,8 +4,8 @@ createApp({
     data() {
         return {
             eventos: [],
-            nuevoEvento: { nombre: '', hora: '', fecha: '' , lugar: '' },
-            editandoEvento: null
+            nuevoEvento: { id: '', nombre: '', hora: '', fecha: '' , lugar: '', imagen: '', link: '' },
+            editandoEvento: null,
         };
     },
     mounted() {
@@ -14,8 +14,8 @@ createApp({
     methods: {
         async cargarEventos() {
             try {
-                const response = await fetch('data.json');
-                this.usuarios = await response.json();
+                const response = await fetch('js/data.json');
+                this.eventos = await response.json();
             } catch (error) {
                 console.error('Error al cargar eventos:', error);
                 this.eventos = [];
@@ -23,7 +23,7 @@ createApp({
         },
         async guardarEventos() {
             try {
-                await fetch('data.json', {
+                await fetch('js/data.json', {
                     method: 'PUT', // O POST si el archivo no existe inicialmente
                     headers: {
                         'Content-Type': 'application/json'
@@ -36,8 +36,10 @@ createApp({
             }
         },
         agregarEvento() {
+            let id = this.eventos.length;
+            this.nuevoEvento.id = id;
             this.eventos.push({ ...this.nuevoEvento });
-            this.nuevoEvento = { nombre: '', hora: '', fecha: '' , lugar: '' };
+            this.nuevoEvento = { id: '', nombre: '', hora: '', fecha: '' , lugar: '', imagen: '', link: '' };
             this.guardarEventos();
         },
         editarEvento(index) {

@@ -22,24 +22,36 @@
                 <input type="text" id="nombre" v-model="nuevoEvento.nombre" required>
             </div>
             <div class="mb-3">
-                <label for="hora">Hora: </label>
-                <input type="text" id="hora" v-model="nuevoEvento.hora" required>
-            </div>
-            <div class="mb-3">
                 <label for="fecha">Fecha: </label>
                 <input type="text" id="fecha" v-model="nuevoEvento.fecha" required>
             </div>
             <div class="mb-3">
+                <label for="hora">Hora: </label>
+                <input type="text" id="hora" v-model="nuevoEvento.hora" required>
+            </div>
+            <div class="mb-3">
                 <label for="lugar">Lugar: </label>
                 <input type="text" id="lugar" v-model="nuevoEvento.lugar" required>
+            </div>
+            <div class="mb-3">
+                <label for="imagen">Imagen: </label>
+                <input type="text" id="imagen" v-model="nuevoEvento.imagen" required>
+            </div>
+            <div class="mb-3">
+                <label for="link">Link: </label>
+                <input type="text" id="link" v-model="nuevoEvento.link" required>
             </div>
             <button class="mb-3" type="submit">Agregar Evento</button>
         </form>
 
         <h2 class="mb-3">Lista de Eventos</h2>
         <ul v-if="eventos.length > 0">
-            <li v-for="(evento, index) in eventos" :key="evento.nombre">
-                {{ evento.nombre }} (fecha: {{ evento.fecha }}, hora: {{ evento.hora }}, Lugar: {{ evento.lugar }})
+            <li v-for="(evento, index) in eventos" :key="evento.id">
+                {{ evento.nombre }} (fecha: {{ evento.fecha }}, hora: {{ evento.hora }}, Lugar: {{ evento.lugar }},)
+                <a :href="evento.link" target="_blank">Ver evento</a> <br>
+                <iframe v-if="evento.imagen" :src="evento.imagen" width="100px" height="auto" allow="fullscreen" style="pointer-events: none;"></iframe>
+                <p v-else>No hay imagen disponible</p>
+                <br>
                 <button @click="editarEvento(index)">Editar</button>
                 <button @click="eliminarEvento(index)">Eliminar</button>
             </li>
@@ -51,15 +63,27 @@
             <form @submit.prevent="guardarEdicion">
                 <div>
                     <label for="editNombre">Nombre:</label>
-                    <input type="text" id="editNombre" v-model="usuarios[editandoEvento].nombre" required>
+                    <input type="text" id="editNombre" v-model="eventos[editandoEvento].nombre" required>
                 </div>
                 <div>
-                    <label for="editCedula">Cédula:</label>
-                    <input type="text" id="editCedula" v-model="usuarios[editandoEvento].cedula" required>
+                    <label for="editFecha">Fecha:</label>
+                    <input type="email" id="editFecha" v-model="eventos[editandoEvento].fecha" required>
                 </div>
                 <div>
-                    <label for="editCorreo">Correo:</label>
-                    <input type="email" id="editCorreo" v-model="usuarios[editandoEvento].correo" required>
+                    <label for="editHora">Hora:</label>
+                    <input type="text" id="editHora" v-model="eventos[editandoEvento].hora" required>
+                </div>
+                <div>
+                    <label for="editLugar">Lugar:</label>
+                    <input type="text" id="editLugar" v-model="eventos[editandoEvento].lugar" required>
+                </div>
+                <div>
+                    <label for="editLink">Link:</label>
+                    <input type="text" id="editLink" v-model="eventos[editandoEvento].link" required>
+                </div>
+                <div>
+                    <label for="editImagen">Link:</label>
+                    <input type="text" id="editImagen" v-model="eventos[editandoEvento].imagen" required>
                 </div>
                 <button type="submit">Guardar</button>
                 <button type="button" @click="cancelarEdicion">Cancelar</button>

@@ -1,0 +1,20 @@
+{
+  "name": "proyectowebupl",
+  "version": "1.0.0",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrjuansebastian/ProyectoWeb-UPL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrjuansebastian/ProyectoWeb-UPL/issues"
+  },
+  "homepage": "https://github.com/mrjuansebastian/ProyectoWeb-UPL#readme",
+  "description": ""
+}
