@@ -4,14 +4,13 @@ const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-//const filePath = './data.json';
-const filePath = 'data.json';
+const filePath = './data.json';
 
 app.use(cors());
 app.use(express.json());
 
 // GET data
-app.get('/data', (req, res) => {
+app.get('/data.json', (req, res) => {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) return res.status(500).send('Error leyendo JSON');
     res.json(JSON.parse(data));
