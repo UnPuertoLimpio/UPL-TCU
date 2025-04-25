@@ -10,12 +10,29 @@ app.use(cors());
 app.use(express.json());
 
 // GET data
-app.get('/data', (req, res) => {
+/*app.get('/data', (req, res) => {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) return res.status(500).send('Error leyendo JSON');
     res.json(JSON.parse(data));
   });
+});*/
+
+app.get('/data', (req, res) => {
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error al leer data.json:', err);
+      return res.status(500).send('Error leyendo JSON');
+    }
+    try {
+      const jsonData = JSON.parse(data);
+      res.json(jsonData);
+    } catch (e) {
+      console.error('JSON mal formado:', e);
+      res.status(500).send('JSON inválido');
+    }
+  });
 });
+
 
 /*app.get('/', (req, res) => {
   res.send('Servidor backend activo 🟢');
