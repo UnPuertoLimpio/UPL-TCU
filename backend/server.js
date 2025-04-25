@@ -9,14 +9,12 @@ const filePath = './data.json';
 app.use(cors());
 app.use(express.json());
 
-// GET data
-/*app.get('/data', (req, res) => {
-  fs.readFile(filePath, 'utf8', (err, data) => {
-    if (err) return res.status(500).send('Error leyendo JSON');
-    res.json(JSON.parse(data));
-  });
-});*/
+// Verificar estado del servidor
+app.get('/', (req, res) => {
+  res.send('Servidor backend activo 🟢');
+});
 
+// GET data
 app.get('/data', (req, res) => {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
@@ -32,11 +30,6 @@ app.get('/data', (req, res) => {
     }
   });
 });
-
-
-/*app.get('/', (req, res) => {
-  res.send('Servidor backend activo 🟢');
-});*/
 
 // PUT data
 app.put('/data', (req, res) => {
