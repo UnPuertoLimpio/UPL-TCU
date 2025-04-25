@@ -14,7 +14,8 @@ createApp({
     methods: {
         async cargarEventos() {
             try {
-                const response = await fetch('js/data.json');
+                //const response = await fetch('js/data.json'); 
+                const response = await fetch('https://proyectoweb-upl.onrender.com');
                 this.eventos = await response.json();
             } catch (error) {
                 console.error('Error al cargar eventos:', error);
@@ -23,7 +24,7 @@ createApp({
         },
         async guardarEventos() {
             try {
-                await fetch('js/data.json', {
+                await fetch('https://proyectoweb-upl.onrender.com', {
                     method: 'PUT', // O POST si el archivo no existe inicialmente
                     headers: {
                         'Content-Type': 'application/json'
