@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // GET data
-app.get('/data.json', (req, res) => {
+app.get('/data', (req, res) => {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) return res.status(500).send('Error leyendo JSON');
     res.json(JSON.parse(data));
