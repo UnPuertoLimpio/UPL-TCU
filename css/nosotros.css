@@ -35,13 +35,41 @@
   }
 }
 
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+  flex: 1;
+  min-width: 400px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #2c2c2c;
+  max-width: 90%;
+}
+
 .map-container {
-  max-width: 800px;
-  margin: 40px auto;
+  flex: 1;
+  min-width: 400px;
+  background-color: #f9f9f9;
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: #f9f9f9;
 }
 
 .map-container iframe {
@@ -49,4 +77,21 @@
   height: 450px;
   border: 0;
   border-radius: 8px;
+}
+
+.separador1 {
+  height: 500px;
+  background-image: url(../img/grupo-playa.jpg);
+  padding-bottom: 700px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.separador2 {
+  height: 500px;
+  background-image: url(../img/grupo-playa-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
