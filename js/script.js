@@ -14,7 +14,10 @@ createApp({
     methods: {
         async cargarEventos() {
             try {
-                //const response = await fetch('js/data.json'); 
+                const statusServer = await fetch('https://proyectoweb-upl.onrender.com/');
+
+                console.log(statusServer.status);
+
                 const response = await fetch('https://proyectoweb-upl.onrender.com/data');
                 this.eventos = await response.json();
             } catch (error) {
