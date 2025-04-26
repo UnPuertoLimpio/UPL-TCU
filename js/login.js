@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const password = document.getElementById("password").value.trim();
   const message = document.getElementById("message");
 
-  fetch("users.json")
+  fetch("data/users.json")
     .then(response => response.json())
     .then(users => {
       const found = users.find(user => user.username === username && user.password === password);
