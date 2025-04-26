@@ -119,7 +119,7 @@
 }
 
 .separador1 {
-    height: 300px;
+    height: 500px;
     background-image: url(../img/bg-2.png);
     background-position: center;
     background-size: cover;
@@ -127,7 +127,7 @@
 }
 
 .separador2 {
-    height: 300px;
+    height: 500px;
     background-image: url(../img/bg-1.jpg);
     padding: 30px;
     background-position: center;
