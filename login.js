@@ -14,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         message.textContent = "¡Login exitoso!";
         // Redirigir al usuario a la página principal después de 1 segundo
         setTimeout(() => {
-          window.location.href = "index.html";
+          window.location.href = "adminEventos.html";
         }, 1000);
       } else {
         message.style.color = "red";
