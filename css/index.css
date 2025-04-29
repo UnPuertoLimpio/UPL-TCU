@@ -173,7 +173,7 @@
 
 @media only screen and (max-width: 750px) {
     .navbar {
-        background-color: white;
+        background-color: #007A7A;
     }
 
     #nosotros>.caja {
