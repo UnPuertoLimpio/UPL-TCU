@@ -52,7 +52,8 @@
             <li v-for="(evento, index) in eventos" :key="evento.id">
                 {{ evento.nombre }} (fecha: {{ evento.fecha }}, hora: {{ evento.hora }}, Lugar: {{ evento.lugar }},)
                 <a :href="evento.link" target="_blank">Ver evento</a> <br>
-                <iframe v-if="evento.imagen" :src="evento.imagen" width="100px" height="auto" allow="fullscreen" style="pointer-events: none;"></iframe>
+                <img :src="evento.imagen" alt="imagen evento" width="100px" height="auto">
+                <!--<iframe v-if="evento.imagen" :src="evento.imagen" width="100px" height="auto" allow="fullscreen" style="pointer-events: none;"></iframe>-->
                 <p v-else>No hay imagen disponible</p>
                 <br>
                 <button @click="editarEvento(index)">Editar</button>
