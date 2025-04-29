@@ -4,11 +4,15 @@ createApp({
     data() {
         return {
             eventos: [],
-            nuevoEvento: { id: '', nombre: '', hora: '', fecha: '' , lugar: '', imagen: '', link: '' },
+            nuevoEvento: { id: '', nombre: '', hora: '', fecha: '', lugar: '', imagen: '', link: '' },
             editandoEvento: null,
         };
     },
-    mounted() {
+    mounted() { /*En Vue.js, la función del hook mounted es una parte del ciclo de vida del componente.
+        Se ejecuta automáticamente después de que el componente ha sido insertado en el DOM (Document Object Model).
+        ¿Para qué se usa?
+        El hook mounted() se usa comúnmente para: Hacer peticiones HTTP (por ejemplo, a una API).
+        Acceder directamente al DOM del componente. Iniciar librerías de terceros que necesitan acceso al DOM.*/
         this.cargarEventos();
     },
     methods: {
@@ -43,7 +47,7 @@ createApp({
             let id = this.eventos.length;
             this.nuevoEvento.id = id;
             this.eventos.push({ ...this.nuevoEvento });
-            this.nuevoEvento = { id: '', nombre: '', hora: '', fecha: '' , lugar: '', imagen: '', link: '' };
+            this.nuevoEvento = { id: '', nombre: '', hora: '', fecha: '', lugar: '', imagen: '', link: '' };
             this.guardarEventos();
         },
         editarEvento(index) {
