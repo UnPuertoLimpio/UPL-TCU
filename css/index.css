@@ -63,7 +63,7 @@
 }
 
 .btn-orange {
-    background-color: #FB5704;
+    background-color: #FB5704 !important; 
     color: #ffffff;
 } 
 
@@ -73,6 +73,7 @@
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 .btn-white {
     background-color: #ffffff;
@@ -187,6 +188,10 @@
 
 }
 
+#voluntariado h2 {
+    color: #005353;
+}
+
 /*2parte Jeyson*/
 
 .video-placeholder {
@@ -288,9 +293,12 @@
 }
 
 .contacto-container {
-    background-color: #f5f5f5;
     padding: 40px;
     border-radius: 10px;
+}
+
+.contacto-container > h4 , h6{
+    color: #007A7A;
 }
 
 .icono-redes {
@@ -305,7 +313,8 @@
 }
 
 .formulario-contacto {
-    background-color: #d3d3d3;
+    background-color: #007A7A;
     border-radius: 10px;
+    color: #fff;
     padding: 40px;
 }
