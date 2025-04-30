@@ -183,6 +183,13 @@
 }
 
 @media only screen and (max-width: 750px) {
+    
+    #inicio {
+        background-image: url(../img/bg_landPage-01.jpg);
+        background-position: left;
+        background-size: cover;
+    }
+    
     .navbar {
         background-color: #007A7A;
     }
