@@ -145,15 +145,26 @@
     width: 100%;
 }
 
+#eventos > h1{
+    color: #005353;
+}
+
 #event-principal {
     width: 300px;
-    height: 300px;
+    height: auto;
     margin-right: 50px;
 }
 
 #evet-todos {
     width: 600px;
-    height: 300px;
+    height: auto;
+}
+
+.itemEvent{
+    border: 3px solid #dc9d00;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 #resultados {

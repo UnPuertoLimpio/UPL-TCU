@@ -14,6 +14,9 @@
 
   <!--JQUERY-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 </head>
 
 <body>
@@ -138,7 +141,8 @@
       </svg>
 
       <h4>Concientización</h4>
-      <p class="text-center">Trabajamos en sensibilizar a la comunidad sobre problemas ecológicos que enfrentamos, despertando el
+      <p class="text-center">Trabajamos en sensibilizar a la comunidad sobre problemas ecológicos que enfrentamos,
+        despertando el
         interés en construir un futuro más limpio y sostenible.</p>
     </div>
 
@@ -164,12 +168,31 @@
   </div>
 
   <!-- Sección de eventos -->
+  <div id="app">
+    <div class="d-flex flex-wrap justify-content-center p-5 bg-claro scroll-target" id="eventos">
+      <h1 class="titulo mb-5">EVENTOS</h1>
+      <div id="event-principal">
+        <img v-if="eventos.length > 0" :src="eventos[eventos.length - 1].imagen" alt="imagen evento" width="100%"
+          height="auto" style="margin-left: 5px;" class="rounded-4">
+      </div>
+      <div class="bg-light rounded-4" id="evet-todos">
 
-  <div class="d-flex flex-wrap justify-content-center p-5 bg-claro scroll-target" id="eventos">
-    <h1 class="titulo mb-5">EVENTOS</h1>
-    <div class="bg-dark rounded-4" id="event-principal"></div>
-    <div class="bg-light rounded-4" id="evet-todos"></div>
+        <div v-if="eventos.length > 0">
+          <div class="itemEvent" v-for="(evento, index ) in eventos.slice(-3).reverse()" :key="evento.id">
+            <b>{{ evento.nombre }}</b> <br> (<b>Fecha:</b> {{ evento.fecha }} | <b>Hora:</b> {{ evento.hora }} |
+            <b>Lugar:</b> {{
+            evento.lugar
+            }},)
+            <a :href="evento.link" target="_blank">Ver evento</a> <br>
+          </div>
+        </div>
+        <p v-else>No hay eventos registrados.</p>
+
+        <a href="eventos.html" class="btn btn-orange float-end btn-conocenos ">Conoce más</a>
+      </div>
+    </div>
   </div>
+
 
   <!-- Sección de resultados -->
 
@@ -208,7 +231,7 @@
           distintas líneas de acción o afines, realiza trabajos comunales universitarios con nosotros, doná tu tiempo
           desde casa para elaboración de material educativo o manejo de redes sociales, difundí y asistí a nuestras
           actividades, ¡las posibilidades son muchas!</p>
-        <a href="https://forms.gle/gQyyFBmpjcTaMDFSA" class="btn-custom btn-orange">¡ Quiero ser Voluntaria/o !</a>
+        <a href="https://forms.gle/gQyyFBmpjcTaMDFSA" class="btn-custom btn-orange" target="_blank">¡ Quiero ser Voluntaria/o !</a>
       </div>
       <!-- Columna del video -->
       <div class="col-md-6">
@@ -355,10 +378,12 @@
       </div>
     </div>
   </div>
+  <script src="js/script.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="js/index.js"></script>
+
 
 
 </body>

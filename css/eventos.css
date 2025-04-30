@@ -81,24 +81,26 @@
 
 .separador1 {
   height: 500px;
-  background-image: url(../img/grupo-playa.jpg);
-  padding-bottom: 700px;
+  background-image: url(../img/img-event.jpg);
+  padding-bottom: 500px;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.separador2 {
-  height: 500px;
-  background-image: url(../img/grupo-playa-2.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
 
 @media only screen and (max-width: 750px) {
   .navbar {
       background-color: #007A7A;
   }
 
+  .separador1 {
+    height: 300px;
+    background-image: url(../img/img-event.jpg);
+    padding-bottom: 300px;
+    background-position:bottom;
+    background-size: cover;
+    background-attachment: fixed;
+
+  }
 }
