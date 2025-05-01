@@ -125,18 +125,25 @@
     background-image: url(../img/bg-2.png);
     background-position: center;
     background-size: cover;
+    -webkit-background-size: cover; /* Para compatibilidad con Safari */
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-origin: padding-box;
+    -webkit-background-attachment: fixed; /* Aunque no es un estándar, algunos intentan forzar compatibilidad */
 }
+
 
 .separador2 {
     height: 500px;
     background-image: url(../img/bg-1.jpg);
-    padding: 30px;
     background-position: center;
     background-size: cover;
+    -webkit-background-size: cover; /* Para compatibilidad con Safari */
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-origin: padding-box;
+    -webkit-background-attachment: fixed; /* Aunque no es un estándar, algunos intentan forzar compatibilidad */
+
 }
 
 .titulo {

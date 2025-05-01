@@ -18,16 +18,6 @@
   background-color: #777;
 }
 
-.imagen-full {
-  width: 100%;
-  height: 300px;
-  /* Ajusta la altura según necesites */
-  background-image: url('imagen.png');
-  /* Ruta de la imagen */
-  background-size: cover;
-  background-position: center;
-}
-
 @media (max-width: 768px) {
   .imagen-full {
     display: none;
@@ -80,12 +70,15 @@
 }
 
 .separador1 {
-  height: 500px;
+  height: 550px;
   background-image: url(../img/img-event.jpg);
-  padding-bottom: 500px;
-  background-position: center;
+  background-position: center;  
   background-size: cover;
+  -webkit-background-size: cover; /* Para compatibilidad con Safari */
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  -webkit-background-attachment: fixed; 
 }
 
 
@@ -95,12 +88,15 @@
   }
 
   .separador1 {
-    height: 300px;
+    height: 500px;
     background-image: url(../img/img-event.jpg);
-    padding-bottom: 300px;
-    background-position:center;
+    background-position-y:-150px;
     background-size: cover;
+    -webkit-background-size: cover; /* Para compatibilidad con Safari */
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    -webkit-background-attachment: fixed; 
 
   }
 }

@@ -18,16 +18,6 @@
   background-color: #777;
 }
 
-.imagen-full {
-  width: 100%;
-  height: 300px;
-  /* Ajusta la altura según necesites */
-  background-image: url('imagen.png');
-  /* Ruta de la imagen */
-  background-size: cover;
-  background-position: center;
-}
-
 @media (max-width: 768px) {
   .imagen-full {
     display: none;
@@ -85,15 +75,11 @@
   padding-bottom: 700px;
   background-position: center;
   background-size: cover;
+  -webkit-background-size: cover; /* Para compatibilidad con Safari */
   background-attachment: fixed;
-}
-
-.separador2 {
-  height: 500px;
-  background-image: url(../img/grupo-playa-2.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  -webkit-background-attachment: fixed; 
 }
 
 @media only screen and (max-width: 750px) {
@@ -101,4 +87,16 @@
       background-color: #007A7A;
   }
 
+  .separador1 {
+    height: 300px;
+    background-image: url(../img/grupo-playa.jpg);
+    padding-bottom: 700px;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover; /* Para compatibilidad con Safari */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    -webkit-background-attachment: fixed; 
+  }
 }
