@@ -72,7 +72,6 @@
 .separador1 {
   height: 500px;
   background-image: url(../img/grupo-playa.jpg);
-  padding-bottom: 700px;
   background-position: center;
   background-size: cover;
   -webkit-background-size: cover; /* Para compatibilidad con Safari */
@@ -88,9 +87,9 @@
   }
 
   .separador1 {
-    height: 300px;
+    height:400px;
     background-image: url(../img/grupo-playa.jpg);
-    background-position: center;
+    background-position: top;
     background-size: contain;
     -webkit-background-size: contain; /* Para compatibilidad con Safari */
     background-attachment: fixed;

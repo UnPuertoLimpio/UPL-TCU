@@ -87,8 +87,9 @@
   }
 
   .separador1 {
-    height: 400px;
+    height: 500px;
     background-image: url(../img/img-event.jpg);
+    background-position: center;
     background-position-y:-100px;
     background-size: contain;
     -webkit-background-size: contain; /* Para compatibilidad con Safari */
