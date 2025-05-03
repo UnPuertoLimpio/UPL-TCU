@@ -211,6 +211,38 @@
         margin-bottom: 50px;
     }
 
+    #nosotros h1 {
+        color: #005353;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .separador1 {
+        height: 400px;
+        background-image: url(../img/bg-2.png);
+        background-position: center;
+        background-size: cover;
+        -webkit-background-size: cover; /* Para compatibilidad con Safari */
+        background-attachment:scroll;
+        background-repeat: no-repeat;
+        background-origin: padding-box;
+        -webkit-background-attachment: scroll; /* Aunque no es un estándar, algunos intentan forzar compatibilidad */
+    }
+    
+    
+    .separador2 {
+        height: 300px;
+        background-image: url(../img/bg-1.jpg);
+        background-position: top;
+        background-size: cover;
+        -webkit-background-size: cover; /* Para compatibilidad con Safari */
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-origin: padding-box;
+        -webkit-background-attachment: scroll; /* Aunque no es un estándar, algunos intentan forzar compatibilidad */
+        margin-bottom: 50px;
+    }
+
 }
 
 #voluntariado h2 {
@@ -315,6 +347,10 @@
         width: 100%;
         height: 300px;
     }
+}
+
+#contacto{
+    padding: 30px 0px;
 }
 
 .contacto-container {
